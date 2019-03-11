@@ -1,0 +1,17 @@
+docker build -t jenkins-maven .
+docker tag jenkins-maven khawarhere/jenkins-maven
+docker push khawarhere/jenkins-maven
+
+# run docker
+
+docker run -d -v jenkins_home:/var/jenkins_home -p 8080:8080 -p 50000:50000 --name jenkins khawarhere/jenkins-maven
+
+docker exec -it jenkins /bin/bash
+
+cat /var/jenkins_home/secrets/initialAdminPassword
+
+655bde9a8158445c8684799f68543db6
+
+#new user
+khawar
+khawar256
