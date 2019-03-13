@@ -1,4 +1,4 @@
-docker build -t jenkins-maven .
+docker build -t khawarhere/jenkins-maven .
 docker tag jenkins-maven khawarhere/jenkins-maven
 docker push khawarhere/jenkins-maven
 
@@ -11,7 +11,3 @@ docker exec -it jenkins /bin/bash
 cat /var/jenkins_home/secrets/initialAdminPassword
 
 655bde9a8158445c8684799f68543db6
-
-#new user
-khawar
-khawar256
